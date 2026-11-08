@@ -1,0 +1,300 @@
+:root {
+  --navy: #0d2340;
+  --navy-deep: #081628;
+  --green: #3d9b54;
+  --paper: #f4f6f9;
+  --ink: #1c2430;
+  --muted: #5b6778;
+  --line: #d8dee8;
+  --card: #ffffff;
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.65;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrap {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(13, 35, 64, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.top-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 72px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.brand strong,
+.brand em {
+  display: block;
+  font-style: normal;
+  letter-spacing: 0.12em;
+}
+
+.brand strong {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.brand em {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--green);
+  margin-top: 3px;
+}
+
+.top nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.top nav a {
+  color: #dbe5f0;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.top nav a:hover {
+  color: #fff;
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 85% 10%, rgba(61, 155, 84, 0.28), transparent 28%),
+    linear-gradient(160deg, var(--navy-deep), var(--navy) 55%, #14345c);
+  color: #fff;
+  padding: 72px 0 64px;
+}
+
+.kicker {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 6px 12px;
+  border: 1px solid rgba(61, 155, 84, 0.55);
+  border-radius: 999px;
+  color: #b7ecc4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0 0 16px;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.lede {
+  max-width: 720px;
+  margin: 0;
+  color: #d5deea;
+  font-size: 18px;
+}
+
+.lede a {
+  color: #8fe3a4;
+}
+
+.meta {
+  margin: 22px 0 0;
+  color: #9aabbf;
+  font-size: 14px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 36px;
+  padding: 40px 0 72px;
+  align-items: start;
+}
+
+.toc {
+  position: sticky;
+  top: 96px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+}
+
+.toc p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.toc ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toc a {
+  display: block;
+  padding: 7px 0;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.toc li:last-child a {
+  border-bottom: 0;
+}
+
+.toc a:hover {
+  color: var(--green);
+}
+
+.policy {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 40px 44px 48px;
+}
+
+.policy section + section {
+  margin-top: 36px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.policy h2 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 26px;
+  letter-spacing: -0.03em;
+}
+
+.policy h3 {
+  margin: 22px 0 8px;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.policy p,
+.policy li {
+  color: #334155;
+}
+
+.policy ul {
+  padding-left: 20px;
+}
+
+.policy li + li {
+  margin-top: 6px;
+}
+
+code {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.92em;
+  background: #eef3f8;
+  padding: 1px 6px;
+  border-radius: 6px;
+}
+
+address {
+  font-style: normal;
+  background: var(--paper);
+  border-left: 4px solid var(--green);
+  border-radius: 0 12px 12px 0;
+  padding: 16px 18px;
+}
+
+footer {
+  background: var(--navy-deep);
+  color: #9aabbf;
+  padding: 28px 0;
+}
+
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #b7ecc4;
+}
+
+@media (max-width: 860px) {
+  .top nav {
+    display: none;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .toc {
+    position: static;
+  }
+
+  .policy {
+    padding: 28px 22px 36px;
+  }
+}
